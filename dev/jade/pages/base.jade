@@ -1,0 +1,73 @@
+extends ../layouts/app
+
+block variables
+	- title 					 = 'Color Event'
+	- pageName 				 = 'index'
+	
+block content
+	nav.section.section-menu
+		include index/menu
+			
+	.section.section-header
+		.section-content
+			h1 Уникальный декор на&nbsp;заказ
+			h3 Фотозоны и декор из бумажных цветов
+			
+	a(name="advantages")
+	.section.section-advantages
+		.section-content
+			include index/advantages
+		
+	.section.section-quote
+		.section-content
+			include index/quote
+			
+	a(name="rent")
+	.section.section-rent
+		include index/rent
+		
+	a(name="order")
+	.section.section-order
+		include index/order
+			
+	.section.section-team
+		include index/team
+	
+	.section.section-numbers
+		.section-content
+			ul.numbers-numbers
+				li
+					.numbers-number 2500
+					h3 метров бумаги потрачено
+					
+				li
+					.numbers-number 6400
+					h3 гостей участвовало
+					
+				li
+					.numbers-number 148
+					h3 часов мероприятий
+					
+	.section.section-partners
+		.section-content
+			include index/partners
+					
+	.section.section-review
+		.section-content
+			include index/review
+
+	.section.section-greeting
+		.section-content
+			h2 Приходите к нам!
+			
+	a(name="contacts")
+	.section.section-map
+		.section-content
+			address Москва, Нижний Сусальский переулок, 5, строение 19 (бизнес-парк «АРМА»)
+			a.phone(href="tel:+79039744052") +7 903 974 4052
+			a.email(href="mailto:zakaz@colorevent.org") zakaz@colorevent.org
+			
+	.popup-overlay
+		include index/popup
+				
+				

@@ -1,0 +1,29 @@
+%index-order-quote
+	margin-bottom: rem(105px)
+	position: relative
+
+	.quote-text
+		p
+			font-size: rem(18px)
+			width: rem(550px)
+			color: #ddd
+			margin-bottom: rem(28px)
+
+	.order-person
+		position: absolute
+		left: rem(640px)
+		top: 0
+
+		h4
+			color: inherit
+
+		p
+			white-space: nowrap
+
+		.person-portrait
+			@extend %person-portrait-highlight
+			&::before
+				background: linear-gradient(135deg, #3980FF, #9232FC)
+
+			&::after
+				box-shadow: 0 0 16px #8142FD

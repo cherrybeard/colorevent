@@ -1,0 +1,28 @@
+%index-advantages-items
+	$advantages: exclusive paper delivery
+
+	@each $advantage in $advantages
+		&.advantages-#{$advantage}
+			&::before
+				background-image: url(../img/index/advantages/#{$advantage}.svg)
+
+	&.advantages-exclusive
+		&::before
+			$size: rem(115px)
+
+			width: $size
+			height: $size
+
+	&.advantages-paper
+		&::before
+			$size: rem(98px)
+
+			width: $size
+			height: $size
+
+	&.advantages-delivery
+		&::before
+			$size: rem(104px)
+
+			width: $size
+			height: $size

@@ -1,0 +1,59 @@
+@import review/arrows
+@import review/portrait
+@import review/review
+@import review/reviews
+
+%index-review
+	background: #1583C6 url(../img/index/review/bg.jpg) center no-repeat
+		size: cover
+	height: rem(600px)
+	position: relative
+
+	@extend %review-arrows
+
+	.review-review
+		@extend %review-review
+		@extend %review-reviews
+
+	.review-texts,
+	.review-name
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+
+	.review-texts,
+	.review-text
+		width: rem(440px)
+		height: rem(185px)
+
+	.review-texts
+		overflow: hidden
+		top: rem(70px)
+
+	.review-text
+		position: absolute
+		transition: transform 0.3s ease-out, opacity 0.8s
+		opacity: 0
+
+		p
+			font-size: rem(18px)
+			line-height: (25/18)
+
+		p + p
+			margin-top: 0.5em
+
+	.review-name
+		opacity: 0
+		transition: transform 0.4s ease-out, opacity 0.2s
+		bottom: rem(40px)
+		font:
+			size: rem(14px)
+			style: italic
+			weight: $font-light
+
+	.review-portrait
+		@extend %review-portrait
+
+		img
+			opacity: 0
+			transition: opacity 0.4s

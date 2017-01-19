@@ -1,0 +1,75 @@
+%index-rent-slider-sliders
+	.slider
+		&:not(.visible)
+			display: none
+
+		&[data-slider-info=hidden]
+			.slider-info
+				bottom: 10px
+
+				button
+					transform: translate(-50%, 50%) scaleY(-1)
+
+			.slider-info-text
+				transform: scale(0.4) translateY(280px)
+				opacity: 0
+
+	.slider-info
+		position: absolute
+		margin: auto
+		text-align: center
+		bottom: 63px
+		left: 50%
+		transform: translateX(-50%)
+		z-index: 100
+		transition: bottom 0.5s ease-out
+
+		h2
+			font-size: 32px
+			margin-bottom: 14px
+
+		p
+			text-align: center
+			font-size: 18px
+
+		button
+			$size: 60px
+
+			position: absolute
+			font-size: 0
+			border-radius: 50%
+			width: $size
+			height: $size
+			left: 50%
+			bottom: 0
+			transform: translate(-50%, 50%)
+			opacity: 0.8
+
+			&::after
+				$border: 1px solid #666
+				$size: 20px
+
+				content: ''
+				border:
+					left: $border
+					bottom: $border
+				position: absolute
+				top: 50%
+				left: 50%
+				width: $size
+				height: $size
+				transform: scaleY(0.9) translate(-50%, -70%) rotate(-45deg)
+
+	.slider-info-text
+		display: none
+		transform-origin: center bottom
+		overflow: hidden
+		background-color: rgba(white, 0.8)
+		border-radius: 4px
+		padding: 45px 45px 0
+		height: 225px
+		width: 424px
+		box-sizing: border-box
+		-webkit-backdrop-filter: saturate(180%) blur(20px)
+		backdrop-filter: saturate(180%) blur(20px)
+		transition: transform 0.3s ease-in, opacity 0.3s ease-in

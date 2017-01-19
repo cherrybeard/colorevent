@@ -1,0 +1,59 @@
+%index-order-work-list
+	.order-item
+		position: relative
+		padding-top: rem(90px)
+		width: rem(196px)
+		display: inline-block
+		vertical-align: top
+
+		&:not(:last-child)
+			margin-right: rem(90px)
+
+		&::before
+			content: ''
+			position: absolute
+			top: rem(32px)
+			left: rem(32px)
+			transform: translate(-50%, -50%)
+			background:
+				position: center
+				repeat: no-repeat
+				size: 100%
+
+		h4
+			font-size: rem(23px)
+			color: inherit
+
+		p
+			color: #ddd
+			font-size: rem(16px)
+			margin-top: rem(16px)
+			opacity: 0.7
+
+		$orders: sketch handwork install
+
+		@each $order in $orders
+			&.order-#{$order}
+				&::before
+					background-image: url(../img/index/order/#{$order}.svg)
+
+		&.order-sketch
+			&::before
+				$size: rem(64px)
+
+				width: $size
+				height: $size
+
+		&.order-handwork
+			&::before
+				$size: 64px
+
+				width: rem($size)
+				height: rem($size + 2px)
+
+		&.order-install
+			&::before
+				$size: rem(65px)
+
+				width: $size
+				height: $size

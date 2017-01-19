@@ -1,0 +1,28 @@
+@import quote/text
+
+%index-quote
+	margin: auto
+	min-height: rem(440px)
+	max-height: rem(600px)
+	height: 60vh
+	background: #E7CEC0 url(../img/index/quote/bg.jpg) center no-repeat
+		size: cover
+	box-sizing: border-box
+	display: flex
+	align-content: center
+
+	.section-content
+		display: flex
+		justify-content: space-between
+
+	.quote-person
+		.person-portrait
+			@extend %person-portrait-highlight
+			&::before
+				background: linear-gradient(135deg, #FFC139, #FC3232)
+
+			&::after
+				box-shadow: 0 0 16px #EC4700
+
+	.quote-text
+		@extend %index-quote-text

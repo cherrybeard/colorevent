@@ -1,0 +1,40 @@
+%index-rent-slider-switcher
+	display: flex
+	justify-content: center
+	align-items: center
+	padding-top: 2px
+
+	button
+		@extend %button-small
+
+		width: 100px
+		display: block
+
+		&:not(:last-child)
+			margin-right: 12px
+
+		&::after
+			background-color: #eee
+
+		=switcher-button-color($color)
+			&:hover
+				&::after
+					background-color: $color
+
+				&::before
+					box-shadow: 0 0 14px $color
+
+		&[data-slider-switcher=dawn]
+			+switcher-button-color($color-rent-dawn)
+
+		&[data-slider-switcher=gold]
+			+switcher-button-color($color-rent-gold)
+
+		&[data-slider-switcher=winter]
+			+switcher-button-color($color-rent-winter)
+
+		&[data-slider-switcher=sepia]
+			+switcher-button-color($color-rent-sepia)
+
+		&[data-slider-switcher=melody]
+			+switcher-button-color($color-rent-melody)

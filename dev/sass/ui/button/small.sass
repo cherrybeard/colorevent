@@ -1,0 +1,50 @@
+%button-small
+	$border-radius: 30px
+
+	font:
+		size: 12px
+		weight: $font-light
+	color: #482B2B
+	text-transform: uppercase
+	padding: 0 19px
+	border-radius: $border-radius
+	letter-spacing: 0.1em
+	transition: margin-top 0.3s
+	position: relative
+
+	&:hover,
+	&:focus
+		margin-top: -2px
+
+	&:active
+		margin-top: -1px
+
+		&::before
+			box-shadow: none
+
+	&::before,
+	&::after
+		content: ''
+		position: absolute
+		border-radius: $border-radius
+
+	&::before
+		top: 6px
+		bottom: 2px
+		left: 8px
+		right: 8px
+		z-index: 1
+		transition: box-shadow 0.3s
+
+	&::after
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		z-index: 2
+		transition: background-color 0.3s
+
+	span
+		line-height: 34px
+		position: relative
+		z-index: 3

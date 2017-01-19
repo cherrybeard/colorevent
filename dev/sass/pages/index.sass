@@ -1,0 +1,53 @@
+@import index/menu
+@import index/header
+@import index/advantages
+@import index/quote
+@import index/rent
+@import index/order
+@import index/team
+@import index/numbers
+@import index/partners
+@import index/review
+@import index/map
+
+.page-index
+	.section-menu
+		@extend %index-menu
+
+	.section-header
+		@extend %index-header
+
+	.section-advantages
+		@extend %index-advantages
+
+	.section-quote
+		@extend %index-quote
+
+	.section-rent
+		@extend %index-rent
+
+	.section-order
+		@extend %index-order
+
+	.section-team
+		@extend %index-team
+
+	.section-numbers
+		@extend %index-numbers
+
+	.section-partners
+		@extend %index-partners
+
+	.section-review
+		@extend %index-review
+
+	.section-greeting
+		padding:
+			bottom: rem(75px)
+			top: rem(75px)
+
+		h2
+			text-align: center
+
+	.section-map
+		@extend %index-map

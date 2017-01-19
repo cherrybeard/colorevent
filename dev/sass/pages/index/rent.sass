@@ -1,0 +1,32 @@
+@import rent/slider
+@import rent/price
+@import rent/calc
+
+%index-rent
+	margin: auto
+	padding:
+		top: rem(120px)
+		bottom: rem(120px)
+
+	.rent-header
+		margin-bottom: rem(80px)
+
+		p
+			width: rem(532px)
+			margin-top: rem(40px)
+			font-size: rem(18px)
+			line-height: (28/18)
+
+	.rent-slider
+		@extend %index-rent-slider
+
+	.rent-price
+		@extend %index-rent-price
+		margin-top: rem(78px)
+		position: relative
+
+	.rent-calc
+		@extend %index-rent-calc
+		position: absolute
+		top: 0
+		left: rem(420px)

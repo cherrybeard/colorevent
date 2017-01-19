@@ -1,0 +1,44 @@
+%index-quote-text
+	margin-top: rem(10px)
+	width: rem(494px)
+	position: relative
+	color: #222
+	margin-right: rem(40px)
+	flex-shrink: 0
+
+	&::before,
+	&::after
+		content: ''
+		position: absolute
+		background: url(../img/index/quote/quote.svg) center no-repeat
+			size: 100%
+
+	&::before
+		top: 0
+		left: rem(-54px)
+		width: rem(27px)
+		height: rem(28px)
+
+	&::after
+		bottom: 0
+		right: rem(-30px)
+		width: rem(27px)
+		height: rem(28px)
+		transform: scale(-1)
+
+	p
+		margin-bottom: rem(17px)
+		font-size: rem(18px)
+		line-height: rem(28px)
+
+	a,
+	.colored
+		color: #EC4C00
+
+	a
+		border-bottom: currentColor dashed 1px
+		transition: color 0.2s, border-bottom 0.2s
+
+		&:hover
+			color: #F04D91
+			border-bottom-color: currentColor

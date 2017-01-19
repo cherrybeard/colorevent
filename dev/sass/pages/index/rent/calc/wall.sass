@@ -1,0 +1,48 @@
+%index-rent-calc-wall
+	$size-multiplier: 0.6
+
+	position: absolute
+	left: 0
+	bottom: 170px
+	border: 2px solid $color-rent-dawn-saturated
+	transition: width 0.3s ease-out, height 0.3s ease-out, border-color 0.5s
+	overflow: hidden
+
+	&::before
+		content: ''
+		position: absolute
+		bottom: -1px
+		left: -1px
+		width: 602px * $size-multiplier
+		height: 252px * $size-multiplier
+		background: $color-rent-dawn-saturated url('../img/index/rent.svg') center no-repeat
+			size: cover
+		transition: background-color 0.5s
+
+	&[data-size="XS"]
+		width: 200px * $size-multiplier
+		height: 200px * $size-multiplier
+
+	&[data-size="S"]
+		width: 250px * $size-multiplier
+		height: 250px * $size-multiplier
+
+	&[data-size="M"]
+		width: 300px * $size-multiplier
+		height: 250px * $size-multiplier
+
+	&[data-size="L"]
+		width: 420px * $size-multiplier
+		height: 250px * $size-multiplier
+
+	&[data-size="XL"]
+		width: 480px * $size-multiplier
+		height: 250px * $size-multiplier
+
+	&[data-size="XXL"]
+		width: 540px * $size-multiplier
+		height: 250px * $size-multiplier
+
+	&[data-size="XXXL"]
+		width: 600px * $size-multiplier
+		height: 250px * $size-multiplier

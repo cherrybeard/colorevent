@@ -1,0 +1,36 @@
+@import menu/menu
+@import menu/callback
+
+%index-menu
+	position: fixed
+	background: white
+	left: 0
+	right: 0
+	top: 0
+	border-bottom: 1px solid rgba(black, 0.1)
+	z-index: 1000
+	box-sizing: border-box
+	padding: 10px rem(40px)
+	text-align: center
+	min-width: rem(900px)
+
+	.menu-logo
+		background: url(../img/index/logo.png) center no-repeat
+			size: 100%
+		height: rem(28px)
+		width: rem(227px)
+		font-size: 0
+		display: block
+		margin-top: rem((34px - 28px) / 2)
+		float: left
+
+	.menu-menu li
+		line-height: rem(34px)
+
+	.menu-menu
+		@extend %index-menu-menu
+		display: inline-block
+
+	.menu-callback
+		@extend %index-menu-callback
+		float: right

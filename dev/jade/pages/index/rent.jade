@@ -1,0 +1,32 @@
+.section-content.rent-header
+	h2 Стена из&nbsp;цветов в&nbsp;аренду
+	h3 Аренда фотозон
+	p Экономичный и&nbsp;элегантный вариант для&nbsp;офромления вашего мероприятия — это&nbsp;аренда уже&nbsp;готового дизайна фотостены.
+	
+.rent-slider
+	include rent/slider
+	
+.section-content.rent-price(data-rent-price="dawn")
+	.price-content
+		.price-content-text
+			h2 Узнайте, сколько&nbsp;стоит
+			h3 Расчёт стоимости
+			p Доставка в&nbsp;пределах МКАД, монтаж и&nbsp;демонтаж — бесплатно. Заказ не&nbsp;позднее, чем за&nbsp;пять дней.
+			p Предоплата — 15%.
+		button.rent-button(data-popup-open="open")
+			span Заказать
+		p.callus или&nbsp;позвоните нам
+			= " "
+			a(href="tel:+79039744052") +7 903 974 4052
+
+	.rent-calc(data-rent-calc)
+		.rent-calc-wall(data-size="XS")
+		.rent-calc-control
+			.rent-calc-control-move
+				.rent-calc-control-button(data-rent-calc-move)
+				.rent-calc-control-text 200 × 200
+		.rent-calc-price
+			span 18 000
+			= " "
+			| ₽
+			

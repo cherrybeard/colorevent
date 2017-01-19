@@ -1,0 +1,78 @@
+.person
+	text-align: center
+	display: flex
+	flex-direction: column
+	align-items: center
+
+	p
+		font-style: italic
+		font-weight: $font-light
+		font-family: $font-fallback
+		margin-top: 3px
+
+		.wf-active &
+			font-family: $font-primary
+
+	img
+		max-width: 100%
+		border-radius: 50%
+
+	.person-portrait
+		$size: 133px
+
+		width: $size
+		height: $size
+		margin-bottom: 18px
+
+%person-portrait-highlight,
+%person-portrait-highlight-small
+	margin-bottom: 18px
+	position: relative
+
+	&::before,
+	&::after
+		content: ''
+		position: absolute
+		border-radius: 50%
+
+	&::before
+		z-index: 2
+
+	&::after
+		top: 16px
+		bottom: 0
+		left: 4px
+		right: 4px
+		z-index: 1
+
+	img
+		position: relative
+		z-index: 3
+
+%person-portrait-highlight
+	$size: 112px
+
+	width: $size
+	height: $size
+
+	&::before
+		$thickness: 3px
+
+		top: -$thickness
+		bottom: -$thickness
+		left: -$thickness
+		right: -$thickness
+
+%person-portrait-highlight-small
+	$size: 96px
+
+	width: $size
+	height: $size
+
+	&::before
+		$thickness: 5px
+
+		top: -$thickness
+		bottom: -$thickness
+		left: -$thickness
+		right: -$thickness

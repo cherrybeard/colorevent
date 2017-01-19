@@ -1,0 +1,42 @@
+%review-portrait
+	$size: rem(96px)
+
+	width: $size
+	height: $size
+	position: absolute
+	top: 0
+	left: 50%
+	transform: translate(-50%, -50%)
+
+	&::before,
+	&::after
+		content: ''
+		position: absolute
+		border-radius: 50%
+
+	&::before
+		$thickness: rem(5px)
+
+		top: -$thickness
+		bottom: -$thickness
+		left: -$thickness
+		right: -$thickness
+		z-index: 2
+		background: linear-gradient(135deg, #3980FF, #9232FC)
+
+	&::after
+		top: rem(16px)
+		bottom: 0
+		left: rem(4px)
+		right: rem(4px)
+		z-index: 1
+		box-shadow: 0 0 16px #8142FD
+
+	img
+		max-width: 100%
+		border-radius: 50%
+		position: absolute
+		z-index: 3
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)

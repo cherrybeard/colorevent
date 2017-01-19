@@ -1,0 +1,15 @@
+%index-menu-callback
+	$hover-color: #FFCDC8
+
+	@extend %button-small
+
+	&:hover,
+	&:focus
+		&::after
+			background-color: $hover-color
+
+		&::before
+			box-shadow: 0 0 14px $hover-color
+
+	&::after
+		background-color: #FFD9D5

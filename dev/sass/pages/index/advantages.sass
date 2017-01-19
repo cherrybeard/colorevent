@@ -1,0 +1,37 @@
+@import advantages/items
+
+%index-advantages
+	width: rem(790px)
+	margin: auto
+	padding-top: rem(87px)
+	margin-bottom: rem(130px)
+
+	.advantages-list
+		margin-top: rem(62px)
+
+	.advantages-item
+		width: rem(230px)
+		position: relative
+		padding-top: rem(142px)
+		display: inline-block
+		vertical-align: top
+
+		&:not(:last-child)
+			margin-right: rem(44px)
+
+		@extend %index-advantages-items
+
+		&::before
+			content: ''
+			position: absolute
+			top: rem(58px)
+			left: 40%
+			transform: translate(-50%, -50%)
+			background:
+				position: center
+				repeat: no-repeat
+				size: 100%
+
+		p
+			margin-top: rem(12px)
+			line-height: rem(22px)

@@ -1,0 +1,21 @@
+%index-menu-menu
+	li
+		display: inline-block
+
+		&:not(:last-child)
+			margin-right: rem(30px)
+
+	a
+		font:
+			weight: $font-light
+			family: $font-fallback
+			size: rem(14px)
+		transition: color 0.3s
+		display: inline-block
+
+		.wf-active &
+			font-family: $font-primary
+
+		&:hover,
+		&:focus
+			color: #F0715D

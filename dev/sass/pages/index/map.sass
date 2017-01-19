@@ -1,0 +1,37 @@
+%index-map
+	padding-top: rem(70px)
+	background: #425EAE url(../img/index/map.png) center no-repeat
+		size: cover
+	height: rem(330px)
+	box-sizing: border-box
+	color: white
+
+	address
+		@extend %big-caps
+		width: rem(516px)
+		font-size: rem(22px)
+
+	.phone,
+	.email
+		font-family: $font-fallback
+		font-weight: $font-light
+		display: block
+
+		.wf-active &
+			font-family: $font-primary
+
+	.email
+		font-size: rem(28px)
+		margin-top: rem(10px)
+		border-bottom: solid 1px rgba(white, 0.6)
+		display: inline-block
+		transition: border-bottom-color 0.3s
+
+		&:hover,
+		&:focus
+			border-bottom-color: white
+			transition: border-bottom-color 0.1s
+
+	.phone
+		font-size: rem(40px)
+		margin-top: rem(30px)

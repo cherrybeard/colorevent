@@ -1,0 +1,40 @@
+block variables
+
+doctype html
+
+html
+	head
+		meta(http-equiv="charset" content="utf-8")/
+		meta(http-equiv="content-type" content="text/html; charset=UTF-8")/
+		
+		title ColorEvent — фотозоны из бумажных цветов от 18000 руб.
+		
+		meta(name="description" content="Уникальный декор фотозон из бумажных цветов и украшений для праздников. Фотостены на заказ и в аренду.")/
+		meta(name="keywords" content="бумажный цветок, бумажные цветы своими руками, бумажный цветок своими руками, как сделать бумажные цветы, как сделать бумажный цветок, цветы из бумажных салфеток, цветок из бумажной салфетки, бумажные цветы белые, бумажные цветы купить, бумажные цветы из бумаги, большие бумажные цветы, букет из бумажных цветов, фото бумажных цветов, бумажные цветы фото, оформление бумажными цветами, простые бумажные цветы, бумажные цветы на свадьбу, украшение бумажными цветами, фотозона из бумажных цветов, фотостена из бумажных цветов, бумажные цветы для свадьбы, декор бумажными цветами, аренда бумажной фотозоны, бумажная фотозона, бумажные цветы для фотостены, фотозона на свадьбу, фотозона из бумажных цветов аренда, фотозона, детская фотозона, фотозона на день рождения, аренда фотозоны, оформление фотозоны, фотозона фото, фотозоны для фотосессий")/
+		meta(name="viewport" content="width=device-width")/
+		
+		meta(property="og:title" content="ColorEvent — фотозоны из бумажных цветов от 18000 руб.")
+		meta(property="og:description" content="Уникальный декор фотозон из бумажных цветов и украшений для праздников. Фотостены на заказ и в аренду.")
+		meta(property="og:url" content="http://colorevent.org/")
+		meta(property="og:image" content="http://colorevent.org/img/index/share.jpg")
+		meta(property="og:locale" content="en_US")
+		meta(property="og:image:width" content="1200")
+		meta(property="og:image:height" content="630")
+		meta(property="og:type" content="website")
+		meta(property="og:site_name" content="ColorEvent")
+		
+		link(rel="icon" href="img/logo.png")/
+		link(rel="apple-touch-icon-precomposed" sizes="152x152" href="img/logo.png")/
+		
+		
+		link(href="css/app.css" rel="stylesheet")/
+	
+	body
+		.page(class= pageName ? 'page-'+pageName : '' )
+			block content
+		
+		block scripts
+			script(src="js/vendor/jquery-3.1.1.min.js")
+			script(src="js/vendor/in-view.min.js")
+			script(src="js/vendor/webfontloader.js")
+			script(src="js/app.js")

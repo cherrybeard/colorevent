@@ -1,0 +1,16 @@
+%review-arrows
+	.review-prev,
+	.review-next
+		@extend %button-arrow
+		@extend %button-arrow-dark
+		position: absolute
+		z-index: 100
+		top: 50%
+
+	.review-prev
+		left: rem(30px)
+		transform: translateY(-50%)
+
+	.review-next
+		right: rem(30px)
+		transform: scaleX(-1) translateY(-50%)

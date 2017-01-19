@@ -1,0 +1,44 @@
+@import slider/switcher
+@import slider/sliders
+
+%index-rent-slider
+	.slider-switcher
+		@extend %index-rent-slider-switcher
+		margin-bottom: rem(16px)
+
+	.rent-slider-sliders
+		@extend %index-rent-slider-sliders
+
+
+		=rent-slider-colored($color, $name)
+			.slider-info button,
+			.slider-slide
+				background-color: $color
+
+			.slider-info-text[data-slider-info=#{$name}]
+				display: block
+
+			button[data-slider-switcher=#{$name}]
+				&::after
+					background-color: $color
+
+				&:hover
+					margin-top: 0
+
+					&::before
+						box-shadow: none
+
+		&[data-slider-rent=dawn]
+			+rent-slider-colored($color-rent-dawn, dawn)
+
+		&[data-slider-rent=gold]
+			+rent-slider-colored($color-rent-gold, gold)
+
+		&[data-slider-rent=winter]
+			+rent-slider-colored($color-rent-winter, winter)
+
+		&[data-slider-rent=sepia]
+			+rent-slider-colored($color-rent-sepia, sepia)
+
+		&[data-slider-rent=melody]
+			+rent-slider-colored($color-rent-melody, melody)

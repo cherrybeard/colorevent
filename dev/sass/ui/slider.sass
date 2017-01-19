@@ -1,0 +1,59 @@
+.slider
+	position: relative
+	height: 560px
+	width: 100%
+	overflow: hidden
+
+	&:not([slider-state=fixed])
+		.slider-slides
+			transition: transform 0.3s ease-in-out
+
+	.slider-images
+		display: none
+
+	.slider-slides
+		height: 100%
+		display: flex
+		flex-wrap: nowrap
+		position: absolute
+
+	.slider-slide
+		height: 100%
+		background:
+			position: center
+			repeat: no-repeat
+			size: cover
+		position: absolute
+		transition: opacity 0.3s ease-in-out
+		opacity: 0
+
+		&[data-slide-state=next],
+		&[data-slide-state=prev],
+		&[data-slide-state=nextnext],
+		&[data-slide-state=prevprev]
+			&.visible
+			opacity: 0.4
+
+		&[data-slide-state=curr]
+			&.visible
+			opacity: 1
+			z-index: 1
+
+		img
+			height: 100%
+
+	.slider-prev,
+	.slider-next
+		@extend %button-arrow
+		@extend %button-arrow-light
+		position: absolute
+		z-index: 100
+		top: 50%
+
+	.slider-prev
+		left: 60px
+		transform: translateY(-50%)
+
+	.slider-next
+		right: 60px
+		transform: scaleX(-1) translateY(-50%)

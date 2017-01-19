@@ -1,0 +1,46 @@
+.section-content
+	h2 Специально для вашего праздника
+	h3 Фотозоны и декор на заказ
+	
+.order-slider.slider.slider-order(data-slider="order")
+	mixin slide(slide)
+		.slider-slide
+			img(src="img/order/#{slide}.jpg")
+		
+	.slider-nav
+		button.slider-next(data-slider-next) Предыдущий слайд
+		button.slider-prev(data-slider-prev) Следующий слайд
+		
+	.slider-slides
+			
+.section-content.order-quote
+	.quote-text
+		p Дизайнерские решения — ваш&nbsp;выбор, если вы&nbsp;хотите, чтобы на&nbsp;мероприятии всё&nbsp;было идеально.
+		p Мы&nbsp;оформим пространство незабываемыми инсталляциями из&nbsp;бумажных цветов и&nbsp;позаботимся, чтобы гости ушли с&nbsp;мероприятия с&nbsp;самыми яркими впечатлениями!
+	
+	.order-person.person
+		.person-portrait
+			img(src="img/index/team/aleksandra.jpg")
+		h4 Александра
+		p художник-декоратор
+
+.order-work.section-content
+	ul.order-work-list
+		li.order-item.order-sketch
+			h4 Эскиз
+			p Выслушаем ваши предложения и нарисуем эскиз украшений
+			
+		li.order-item.order-handwork
+			h4 Работа
+			p Кропотливо создаём красоту
+			
+		li.order-item.order-install
+			h4 Монтаж
+			p Не позже чем за 5 часов до начала мероприятия
+
+	button.order-button(data-popup-open="open")
+		span Обратный звонок
+		
+	p.callus или&nbsp;позвоните нам
+		= " "
+		a(href="tel:+79039744052") +7 903 974 4052

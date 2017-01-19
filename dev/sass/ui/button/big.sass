@@ -1,0 +1,51 @@
+%button-big
+	$height: 58px
+	$border-radius: $height / 2
+
+	border-radius: $border-radius
+	font:
+		size: 22px
+		weight: $font-light
+	line-height: $height
+	text-transform: uppercase
+	margin-left: -3px
+	letter-spacing: 0.1em
+	width: 320px
+	transition: margin-top 0.3s
+
+	&:hover,
+	&:focus
+		margin-top: -2px
+
+	&:active
+		margin-top: -1px
+		color: inherit
+
+		&::before
+			box-shadow: none
+
+	&::before,
+	&::after
+		content: ''
+		position: absolute
+		border-radius: $border-radius
+
+	&::before
+		top: 6px
+		bottom: 2px
+		left: 8px
+		right: 8px
+		z-index: 1
+		transition: box-shadow 0.3s
+
+	&::after
+		$thickness: 3px
+		top: $thickness
+		bottom: $thickness
+		left: $thickness
+		right: $thickness
+		z-index: 2
+
+	span
+		position: relative
+		z-index: 3

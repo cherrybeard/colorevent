@@ -1,0 +1,49 @@
+@import order/quote
+@import order/work-list
+
+%index-order
+	margin: auto
+	padding-bottom: rem(110px)
+	background-color: #222
+	padding-top: rem(85px)
+	box-sizing: border-box
+	color: white
+
+	h2
+		color: inherit
+
+	.callus
+		margin:
+			top: rem(160px)
+			left: 40px
+
+	.order-slider
+		margin-top: rem(46px)
+
+		.slider-slide
+			background: black
+
+	.order-quote
+		margin-top: rem(106px)
+		@extend %index-order-quote
+
+	.order-work
+		position: relative
+
+	.order-work-list
+		margin-bottom: rem(75px + 58px)
+		@extend %index-order-work-list
+
+	.order-button
+		@extend %button-big
+		background: linear-gradient(to right, #3980FF 0%, #32BEFC 100%)
+		position: absolute
+		top: rem(280px)
+		color: white
+
+		&:hover
+			&::before
+				box-shadow: 0 0 20px #3467FD
+
+		&::after
+			background-color: #222

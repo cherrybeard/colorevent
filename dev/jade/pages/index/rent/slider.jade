@@ -1,0 +1,35 @@
+.rent-slider-sliders(data-slider-rent="dawn")
+	.slider-switcher
+		button(data-slider-switcher="dawn")
+			span Рассвет
+		button(data-slider-switcher="gold")
+			span Золото
+		button(data-slider-switcher="winter")
+			span Зима
+		button(data-slider-switcher="sepia")
+			span Сепия
+		button(data-slider-switcher="melody")
+			span Мелодия
+
+	.slider.slider-rent.visible(data-slider="rent")
+		.slider-info
+			.slider-info-text(data-slider-info="dawn")
+				h2 Рассвет
+				p Нежные оттенки прекрасно подойдут для свадьбы или дня рождения девочки
+			.slider-info-text(data-slider-info="gold")
+				h2 Золото
+				p Роскошные оттенки жёлтого и&nbsp;коричневого придадут элегантность вашему мероприяти
+			.slider-info-text(data-slider-info="winter")
+				h2 Зима
+				p Холодные оттенки синего поддержат атмосферу зимнего праздника или&nbsp;свадьбы в голубых тонах
+			.slider-info-text(data-slider-info="sepia")
+				h2 Сепия
+				p Тёплые оттенки оранжевого и&nbsp;коричневого подойдут для тёмного помещения в шоколадных тонах
+			.slider-info-text(data-slider-info="melody")
+				h2 Мелодия
+				p Необычные оттенки создадут таинственную атмосферу, например детской сказки
+			button(data-slider-toggle) Скрыть
+			
+		.slider-nav
+			button.slider-next(data-slider-next) Предыдущий слайд
+			button.slider-prev(data-slider-prev) Следующий слайд

@@ -1,0 +1,20 @@
+.popup(data-popup-state="form")
+	button.popup-close(data-popup-open="close") Закрыть окно
+	
+	.popup-form
+		h2 Мы перезвоним
+		h3 Обратный звонок
+		
+		form#callback(action="" method="post")
+			.text-input
+				input(type="text" name="name" placeholder="Имя")
+			.text-input
+				input(type="text" name="phone" placeholder="Телефон")
+			button.popup-submit
+				span Отправить
+			
+	.popup-confirm
+		h2 Ожидайте звонка
+		h3 Ваша заявка принята
+		button.popup-nice(data-popup-open="close")
+			span Отлично

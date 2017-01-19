@@ -1,0 +1,55 @@
+@import calc/wall
+
+%index-rent-calc
+	width: 360px
+	height: 330px
+
+	.rent-calc-wall
+		@extend %index-rent-calc-wall
+
+	.rent-calc-price,
+	.rent-calc-control-text
+		font-weight: $font-light
+
+	.rent-calc-control-text
+		font:
+			family: $font-fallback
+			size: 14px
+		color: #666
+		margin-top: 12px
+
+		.wf-active &
+			font-family: $font-primary
+
+	.rent-calc-control
+		width: 100%
+		height: 2px
+		background: #DDD
+		position: absolute
+		top: 200px
+
+	.rent-calc-control-move
+		position: absolute
+		left: 0
+		top: 0
+		display: flex
+		flex-direction: column
+		align-items: center
+		transform: translate(-50%, -11px)
+		width: 60px
+		transition: left 0.2s ease-out
+
+	.rent-calc-control-button
+		$size: 22px
+
+		background: $color-rent-dawn-saturated
+		border-radius: 50%
+		width: $size
+		height: $size
+		transition: background-color 0.5s
+
+	.rent-calc-price
+		position: absolute
+		top: 260px
+		font-size: 42px
+		right: 200px

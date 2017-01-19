@@ -1,0 +1,70 @@
+%index-rent-price
+	=rent-price-colored($color)
+		.rent-calc-wall
+			border-color: $color
+
+			&::before
+				background-color: $color
+
+		.rent-calc-control-button
+			background-color: $color
+
+		.rent-button
+			background: $color
+
+			&:hover
+				&::before
+					box-shadow: 0 0 20px rgba($color, 0.5)
+
+	&[data-rent-price=dawn]
+		+rent-price-colored($color-rent-dawn-saturated)
+
+	&[data-rent-price=gold]
+		+rent-price-colored($color-rent-gold-saturated)
+
+	&[data-rent-price=winter]
+		+rent-price-colored($color-rent-winter-saturated)
+
+	&[data-rent-price=sepia]
+		+rent-price-colored($color-rent-sepia-saturated)
+
+	&[data-rent-price=melody]
+		+rent-price-colored($color-rent-melody-saturated)
+
+	.price-content
+		width: rem(340px)
+		position: relative
+
+		h2
+			font-size: rem(32px)
+
+		h3
+			font-size: rem(18px)
+			margin-bottom: rem(20px)
+
+		p
+			width: rem(300px)
+
+		p + p
+			margin-top: rem(18px)
+
+	.callus
+		margin:
+			top: rem(110px)
+			left: 40px
+
+	.price-content-text
+		margin-bottom: rem(34px + 58px)
+
+	.rent-button
+		@extend %button-big
+		background: $color-rent-dawn-saturated
+		position: absolute
+		top: rem(260px)
+
+		&:hover
+			&::before
+				box-shadow: 0 0 20px rgba($color-rent-dawn-saturated, 0.5)
+
+		&::after
+			background-color: white
